@@ -18,7 +18,7 @@ class Discriminator(nn.Module):
         self.conv1 = nn.Sequential(
             nn.Conv2d(64, 128, kernel_size=4, stride=2, padding=1, bias=True, padding_mode="reflect"),    
             nn.InstanceNorm2d(128),
-            nn.LeakyReLU(0.2, inplace=True),
+            nn.LeakyU(0.2, inplace=True),
         )
         
         self.conv2 = nn.Sequential(
@@ -53,7 +53,7 @@ class Discriminator(nn.Module):
             x3 = self.conv3(x2)
             # x4 = self.conv4(x3)
             if(feature_extract == False):
-                if(config.BCE or config.WAS):
+                if(config.BCE):
                     return self.conv4(x3)
                 else:
                     return torch.sigmoid(self.conv4(x3))
