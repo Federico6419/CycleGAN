@@ -10,7 +10,7 @@ import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
 DEVICE ="cuda" if torch.cuda.is_available() else "cpu"
-TRAIN_DIR = "/Datasets/Train"
+TRAIN_DIR = "Datasets/Train"
 TEST_DIR = "/Datasets/Test"
 
 LEARNING_RATE = 1e-5
