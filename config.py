@@ -11,7 +11,7 @@ from albumentations.pytorch import ToTensorV2
 
 DEVICE ="cuda" if torch.cuda.is_available() else "cpu"
 TRAIN_DIR = "Datasets/Train"
-TEST_DIR = "/Datasets/Test"
+TEST_DIR = "Datasets/Test"
 
 LEARNING_RATE = 1e-5
 GAMMA_CYCLE = 0.1
