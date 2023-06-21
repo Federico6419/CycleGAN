@@ -18,7 +18,7 @@ class Discriminator(nn.Module):
         self.conv1 = nn.Sequential(
             nn.Conv2d(64, 128, kernel_size=4, stride=2, padding=1, bias=True, padding_mode="reflect"),    
             nn.InstanceNorm2d(128),
-            nn.LeakyU(0.2, inplace=True),
+            nn.LeakyReLU(0.2, inplace=True),
         )
         
         self.conv2 = nn.Sequential(
