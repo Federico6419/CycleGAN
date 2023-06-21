@@ -10,7 +10,7 @@ import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
 DEVICE ="cuda" if torch.cuda.is_available() else "cpu"
-TRAIN_DIR = "C:/Users/ASUS/Desktop/CycleGAN/Dataset/Train"
+TRAIN_DIR = "tree/main/Datasets/trainSummer"
 TEST_DIR = "C:/Users/ASUS/Desktop/CycleGAN/Dataset/Test"
 TRAIN_DIR_ALT="C:/Users/ASUS/Desktop/CycleGAN/Dataset_alt"
 TEST_DIR_ALT ="C:/Users/ASUS/Desktop/CycleGAN/Dataset_alt/Test"
