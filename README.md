@@ -1,1 +1,1 @@
-# VisionProject2022
+# Mask CycleGAN
