@@ -19,12 +19,10 @@ GAMMA_CYCLE = 0.1
 LAMBDA_CYCLE = 10
 LAMBDA_IDENTITY = 5 # 0.5*lambda_cycle
 NUM_EPOCHS = 50
-LOAD_MODEL = True
+LOAD_MODEL = False
 SAVE_MODEL = False
-TRAIN_MODEL = False
-DATASET_ORIGINAL= True
-WAS = False                             
-REL = True
+TRAIN_MODEL = True
+DATASET_ORIGINAL= True                            
 BCE= False
 BETTER= False
 
