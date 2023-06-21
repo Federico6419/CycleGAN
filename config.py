@@ -28,10 +28,10 @@ REL = True
 BCE= False
 BETTER= False
 
-CHECKPOINT_GEN_W = "C:\\Users\\Asus\\Desktop\\CycleGAN\Save_REL_Weights\\gen_w.pth.tar"
-CHECKPOINT_GEN_S= "C:\\Users\\Asus\\Desktop\\CycleGAN\\Save_REL_Weights\\gen_s.pth.tar"
-CHECKPOINT_DISC_W = "C:\\Users\\Asus\\Desktop\\CycleGAN\\Save_REL_Weights\\disc_w.pth.tar"
-CHECKPOINT_DISC_S = "C:\\Users\\Asus\\Desktop\\CycleGAN\\Save_REL_Weights\\disc_s.pth.tar"
+CHECKPOINT_GEN_A = "C:\\Users\\Asus\\Desktop\\MaskCycleGAN\Save_Weights\\gen_a.pth.tar"     #!!!!!
+CHECKPOINT_GEN_B= "C:\\Users\\Asus\\Desktop\\CycleGAN\\Save_Weights\\gen_b.pth.tar"
+CHECKPOINT_DISC_A = "C:\\Users\\Asus\\Desktop\\CycleGAN\\Save_Weights\\disc_a.pth.tar"
+CHECKPOINT_DISC_B = "C:\\Users\\Asus\\Desktop\\CycleGAN\\Save_Weights\\disc_b.pth.tar"
 
 transforms = A.Compose(
     [
