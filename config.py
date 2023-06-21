@@ -12,8 +12,7 @@ from albumentations.pytorch import ToTensorV2
 DEVICE ="cuda" if torch.cuda.is_available() else "cpu"
 TRAIN_DIR = "tree/main/Datasets/Train"
 TEST_DIR = "tree/main/Datasets/Test"
-TRAIN_DIR_ALT="tree/main/Datasets/trainSummer"
-TEST_DIR_ALT ="tree/main/Datasets/testSummer"
+
 LEARNING_RATE = 1e-5
 GAMMA_CYCLE = 0.1
 LAMBDA_CYCLE = 10
@@ -22,7 +21,7 @@ NUM_EPOCHS = 50
 LOAD_MODEL = False
 SAVE_MODEL = False
 TRAIN_MODEL = True
-DATASET_ORIGINAL= True                            
+TRANSFORMATION = "WinterToSummer"                          
 BCE= False
 BETTER= False
 
