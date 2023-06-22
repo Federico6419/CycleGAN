@@ -1,10 +1,3 @@
-
-
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
 import torch
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
@@ -19,7 +12,7 @@ LAMBDA_CYCLE = 10
 LAMBDA_IDENTITY = 5 # 0.5*lambda_cycle
 NUM_EPOCHS = 50
 LOAD_MODEL = False
-SAVE_MODEL = False
+SAVE_MODEL = True
 TRAIN_MODEL = True
 TRANSFORMATION = "WinterToSummer"                          
 BCE= False
