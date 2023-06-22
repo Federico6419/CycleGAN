@@ -9,32 +9,32 @@ import numpy as np
 from torch.utils.data import Dataset
 
 class Dataset(Dataset):
-    def __init__(self, summer_dir, winter_dir, transform):
-        self.root_summer = summer_dir
-        self.root_winter = winter_dir
+    def __init__(self, domainB_dir, domainA_dir, transform):
+        self.root_domainB = domainB_dir
+        self.root_domainA = domainA_dir
         self.transform = transform
 
-        self.summer_images = os.listdir(summer_dir)
-        self.winter_images = os.listdir(winter_dir)
-        self.summer_length = len(self.summer_images)
-        self.winter_length = len(self.winter_images)
+        self.domainB_images = os.listdir(domainB_dir)
+        self.domainA_images = os.listdir(domainA_dir)
+        self.domainB_length = len(self.domainB_images)
+        self.domainA_length = len(self.domainA_images)
 
     def __len__(self):
-        return max(len(self.summer_images), len(self.winter_images))
+        return max(len(self.domainB_images), len(self.domainA_images))
 
     def __getitem__(self, index):
-        summer_img = self.summer_images[index % self.summer_length]
-        winter_img = self.winter_images[index % self.winter_length]
+        domainB_img = self.domainB_images[index % self.domainB_length]
+        domainA_img = self.domainA_images[index % self.domainA_length]
 
-        summer_path = os.path.join(self.root_summer, summer_img)
-        winter_path = os.path.join(self.root_winter, winter_img)
+        domainB_path = os.path.join(self.root_domainB, domainB_img)
+        domainA_path = os.path.join(self.root_domainA, domainA_img)
 
-        summer_img = np.array(Image.open(summer_path).convert("RGB"))
-        winter_img = np.array(Image.open(winter_path).convert("RGB"))
+        domainB_img = np.array(Image.open(domainB_path).convert("RGB"))
+        domainA_img = np.array(Image.open(domainA_path).convert("RGB"))
 
         if self.transform:
-            augmentations = self.transform(image=summer_img, image0=winter_img)
-            summer_img = augmentations["image"]
-            winter_img = augmentations["image0"]
+            augmentations = self.transform(image=domainB_img, image0=domainA_img)
+            domainA_img = augmentations["image"]
+            domainB_img = augmentations["image0"]
 
-        return summer_img, winter_img
+        return domainB_img, domainA_img
