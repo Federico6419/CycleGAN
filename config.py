@@ -15,7 +15,6 @@ LOAD_MODEL = False
 SAVE_MODEL = True
 TRAIN_MODEL = True
 TRANSFORMATION = "HorseToZebra"                          
-BCE= False
 BETTER= False
 
 CHECKPOINT_GEN_A = "Checkpoints/gen_a.pth.tar"     #!!!!!
