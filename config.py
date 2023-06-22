@@ -17,10 +17,10 @@ TRAIN_MODEL = True
 TRANSFORMATION = "HorseToZebra"                          
 BETTER= False
 
-CHECKPOINT_GEN_A = "Checkpoints/gen_a.pth.tar"     #!!!!!
-CHECKPOINT_GEN_B= "Checkpoints/gen_b.pth.tar"
-CHECKPOINT_DISC_A = "Checkpoints/disc_a.pth.tar"
-CHECKPOINT_DISC_B = "Checkpoints/disc_b.pth.tar"
+CHECKPOINT_GEN_A = "MyDrive/Checkpoints/gen_a.pth.tar"     
+CHECKPOINT_GEN_B= "MyDrive/Checkpoints/gen_b.pth.tar"
+CHECKPOINT_DISC_A = "MyDrive/Checkpoints/disc_a.pth.tar"
+CHECKPOINT_DISC_B = "MyDrive/Checkpoints/disc_b.pth.tar"
 
 transforms = A.Compose(
     [
