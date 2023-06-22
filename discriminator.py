@@ -53,10 +53,7 @@ class Discriminator(nn.Module):
             x3 = self.conv3(x2)
             # x4 = self.conv4(x3)
             if(feature_extract == False):
-                if(config.BCE):
-                    return self.conv4(x3)
-                else:
-                    return torch.sigmoid(self.conv4(x3))
+                return torch.sigmoid(self.conv4(x3))
             else:
                 return x3
 
