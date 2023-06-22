@@ -18,10 +18,10 @@ TRANSFORMATION = "WinterToSummer"
 BCE= False
 BETTER= False
 
-CHECKPOINT_GEN_A = "C:\\Users\\Asus\\Desktop\\MaskCycleGAN\Save_Weights\\gen_a.pth.tar"     #!!!!!
-CHECKPOINT_GEN_B= "C:\\Users\\Asus\\Desktop\\CycleGAN\\Save_Weights\\gen_b.pth.tar"
-CHECKPOINT_DISC_A = "C:\\Users\\Asus\\Desktop\\CycleGAN\\Save_Weights\\disc_a.pth.tar"
-CHECKPOINT_DISC_B = "C:\\Users\\Asus\\Desktop\\CycleGAN\\Save_Weights\\disc_b.pth.tar"
+CHECKPOINT_GEN_A = "Checkpoints/gen_a.pth.tar"     #!!!!!
+CHECKPOINT_GEN_B= "Checkpoints/gen_b.pth.tar"
+CHECKPOINT_DISC_A = "Checkpoints/disc_a.pth.tar"
+CHECKPOINT_DISC_B = "Checkpoints/disc_b.pth.tar"
 
 transforms = A.Compose(
     [
