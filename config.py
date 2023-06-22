@@ -10,11 +10,11 @@ LEARNING_RATE = 1e-5
 GAMMA_CYCLE = 0.1
 LAMBDA_CYCLE = 10
 LAMBDA_IDENTITY = 5 # 0.5*lambda_cycle
-NUM_EPOCHS = 50
+NUM_EPOCHS = 20
 LOAD_MODEL = False
 SAVE_MODEL = True
 TRAIN_MODEL = True
-TRANSFORMATION = "WinterToSummer"                          
+TRANSFORMATION = "HorseToZebra"                          
 BCE= False
 BETTER= False
 
