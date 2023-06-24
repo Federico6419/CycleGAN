@@ -13,7 +13,7 @@ LAMBDA_IDENTITY = 5 # 0.5*lambda_cycle
 NUM_EPOCHS = 10
 LOAD_MODEL = True
 SAVE_MODEL = False
-TRAIN_MODEL = False
+TRAIN_MODEL = True
 TRANSFORMATION = "HorseToZebra"                          
 BETTER= False
 
