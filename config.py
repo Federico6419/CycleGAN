@@ -10,7 +10,7 @@ LEARNING_RATE = 1e-5
 GAMMA_CYCLE = 0.1
 LAMBDA_CYCLE = 10
 LAMBDA_IDENTITY = 5 # 0.5*lambda_cycle
-NUM_EPOCHS = 40
+NUM_EPOCHS = 10
 LOAD_MODEL = True
 SAVE_MODEL = True
 TRAIN_MODEL = True
@@ -22,10 +22,10 @@ CHECKPOINT_GEN_B= "../drive/MyDrive/Checkpoints/HorseToZebra10/gen_b.pth.tar"
 CHECKPOINT_DISC_A = "../drive/MyDrive/Checkpoints/HorseToZebra10/disc_a.pth.tar"
 CHECKPOINT_DISC_B = "../drive/MyDrive/Checkpoints/HorseToZebra10/disc_b.pth.tar"
 
-NEW_CHECKPOINT_GEN_A = "Checkpoints/gen_a.pth.tar"     
-NEW_CHECKPOINT_GEN_B= "Checkpoints/gen_b.pth.tar"
-NEW_CHECKPOINT_DISC_A = "Checkpoints/disc_a.pth.tar"
-NEW_CHECKPOINT_DISC_B = "Checkpoints/disc_b.pth.tar"
+NEW_CHECKPOINT_GEN_A = "../drive/My Drive/Checkpoints/HorseToZebra20/gen_a.pth.tar"     
+NEW_CHECKPOINT_GEN_B= "../drive/My Drive/Checkpoints/HorseToZebra20/gen_b.pth.tar"
+NEW_CHECKPOINT_DISC_A = "../drive/My Drive/Checkpoints/HorseToZebra20/disc_a.pth.tar"
+NEW_CHECKPOINT_DISC_B = "../drive/My Drive/Checkpoints/HorseToZebra20/disc_b.pth.tar"
 
 transforms = A.Compose(
     [
