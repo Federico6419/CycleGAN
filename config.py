@@ -17,15 +17,15 @@ TRAIN_MODEL = True
 TRANSFORMATION = "HorseToZebra"                          
 BETTER= False
 
-CHECKPOINT_GEN_A = "../drive/MyDrive/Checkpoints/HorseToZebra10/gen_a.pth.tar"     
-CHECKPOINT_GEN_B= "../drive/MyDrive/Checkpoints/HorseToZebra10/gen_b.pth.tar"
-CHECKPOINT_DISC_A = "../drive/MyDrive/Checkpoints/HorseToZebra10/disc_a.pth.tar"
-CHECKPOINT_DISC_B = "../drive/MyDrive/Checkpoints/HorseToZebra10/disc_b.pth.tar"
+CHECKPOINT_GEN_A = "../drive/MyDrive/Checkpoints/HorseToZebra20/gen_a.pth.tar"     
+CHECKPOINT_GEN_B= "../drive/MyDrive/Checkpoints/HorseToZebra20/gen_b.pth.tar"
+CHECKPOINT_DISC_A = "../drive/MyDrive/Checkpoints/HorseToZebra20/disc_a.pth.tar"
+CHECKPOINT_DISC_B = "../drive/MyDrive/Checkpoints/HorseToZebra20/disc_b.pth.tar"
 
-NEW_CHECKPOINT_GEN_A = "../drive/My Drive/Checkpoints/HorseToZebra20/gen_a.pth.tar"     
-NEW_CHECKPOINT_GEN_B= "../drive/My Drive/Checkpoints/HorseToZebra20/gen_b.pth.tar"
-NEW_CHECKPOINT_DISC_A = "../drive/My Drive/Checkpoints/HorseToZebra20/disc_a.pth.tar"
-NEW_CHECKPOINT_DISC_B = "../drive/My Drive/Checkpoints/HorseToZebra20/disc_b.pth.tar"
+NEW_CHECKPOINT_GEN_A = "../drive/My Drive/Checkpoints/HorseToZebra30/gen_a.pth.tar"     
+NEW_CHECKPOINT_GEN_B= "../drive/My Drive/Checkpoints/HorseToZebra30/gen_b.pth.tar"
+NEW_CHECKPOINT_DISC_A = "../drive/My Drive/Checkpoints/HorseToZebra30/disc_a.pth.tar"
+NEW_CHECKPOINT_DISC_B = "../drive/My Drive/Checkpoints/HorseToZebra30/disc_b.pth.tar"
 
 transforms = A.Compose(
     [
