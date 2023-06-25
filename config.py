@@ -6,7 +6,7 @@ DEVICE ="cuda" if torch.cuda.is_available() else "cpu"
 TRAIN_DIR = "Datasets/Train"
 TEST_DIR = "Datasets/Test"
 
-LEARNING_RATE = 1e-5
+LEARNING_RATE = 2e-5
 GAMMA_CYCLE = 0.1
 LAMBDA_CYCLE = 10
 LAMBDA_IDENTITY = 5 # 0.5*lambda_cycle
