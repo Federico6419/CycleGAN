@@ -9,7 +9,7 @@ TEST_DIR = "Datasets/Test"
 LEARNING_RATE = 2e-5
 GAMMA_CYCLE = 0.1
 LAMBDA_CYCLE = 10
-LAMBDA_IDENTITY = 0 # 0.5*lambda_cycle
+LAMBDA_IDENTITY = 5 # 0.5*lambda_cycle
 NUM_EPOCHS = 10
 LOAD_MODEL = True
 SAVE_MODEL = True
@@ -17,15 +17,15 @@ TRAIN_MODEL = True
 TRANSFORMATION = "HorseToZebra"                          
 BETTER= False
 
-CHECKPOINT_GEN_A = "../drive/MyDrive/Checkpoints/HorseToZebraIdentity7/gen_a.pth.tar"     
-CHECKPOINT_GEN_B= "../drive/MyDrive/Checkpoints/HorseToZebraIdentity7/gen_b.pth.tar"
-CHECKPOINT_DISC_A = "../drive/MyDrive/Checkpoints/HorseToZebraIdentity7/disc_a.pth.tar"
-CHECKPOINT_DISC_B = "../drive/MyDrive/Checkpoints/HorseToZebraIdentity7/disc_b.pth.tar"
+CHECKPOINT_GEN_A = "../drive/MyDrive/Checkpoints/HorseToZebra20/gen_a.pth.tar"     
+CHECKPOINT_GEN_B= "../drive/MyDrive/Checkpoints/HorseToZebra20/gen_b.pth.tar"
+CHECKPOINT_DISC_A = "../drive/MyDrive/Checkpoints/HorseToZebra20/disc_a.pth.tar"
+CHECKPOINT_DISC_B = "../drive/MyDrive/Checkpoints/HorseToZebra20/disc_b.pth.tar"
 
-NEW_CHECKPOINT_GEN_A = "../drive/MyDrive/Checkpoints/HorseToZebraIdentity17/gen_a.pth.tar"     
-NEW_CHECKPOINT_GEN_B= "../drive/MyDrive/Checkpoints/HorseToZebraIdentity17/gen_b.pth.tar"
-NEW_CHECKPOINT_DISC_A = "../drive/MyDrive/Checkpoints/HorseToZebraIdentity17/disc_a.pth.tar"
-NEW_CHECKPOINT_DISC_B = "../drive/MyDrive/Checkpoints/HorseToZebraIdentity17/disc_b.pth.tar"
+NEW_CHECKPOINT_GEN_A = "../drive/MyDrive/Checkpoints/HorseToZebra30/gen_a.pth.tar"     
+NEW_CHECKPOINT_GEN_B= "../drive/MyDrive/Checkpoints/HorseToZebra30/gen_b.pth.tar"
+NEW_CHECKPOINT_DISC_A = "../drive/MyDrive/Checkpoints/HorseToZebra30/disc_a.pth.tar"
+NEW_CHECKPOINT_DISC_B = "../drive/MyDrive/Checkpoints/HorseToZebra30/disc_b.pth.tar"
 
 transforms = A.Compose(
     [
