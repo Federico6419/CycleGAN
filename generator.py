@@ -15,7 +15,7 @@ class ResidualBlock(nn.Module):
             nn.InstanceNorm2d(channels),
             nn.ReLU(inplace=True),
             nn.Conv2d(channels, channels, kernel_size=3, padding_mode="reflect", padding=1),
-            nn.InstanceNorm2d(channels)
+            nn.InstanceNorm2d(channels),
             nn.Identity()
         ).apply(init_weights)
   
