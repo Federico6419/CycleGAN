@@ -1,11 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
 import torch
 import torch.nn as nn
 
-#define the residual block , very useful in the cycle gan(composed by two convolutional layer, only the first use an activation function)
+#Define the Residual Block structure, composed by a convolutional layer and an instance normalization (only the first use an activation function)
 class ResidualBlock(nn.Module):
     def __init__(self, channels):
         super().__init__()
@@ -20,9 +16,9 @@ class ResidualBlock(nn.Module):
     def forward(self, x):
         return x + self.block(x)
 
-#define the generator model
+#Define the generator model
 class Generator(nn.Module):
-    def __init__(self, img_channels, num_residuals=9):      #Sono 9 residuals se la risoluzione dell'image è 256, e 6 se è 128
+    def __init__(self, img_channels, num_residuals=9):      #There are 9 Residual Blocks if the image resolution is 256, while 6 if it is 128
         super().__init__()
         #############################  CONVOLUTIONAL BLOCKS #################################
         self.initial = nn.Sequential(
@@ -40,38 +36,13 @@ class Generator(nn.Module):
             nn.InstanceNorm2d(256),
             nn.ReLU(inplace=True)   
         )
-        # block used if more features
-        """
-        self.conv3 = nn.Sequential(
-            nn.Conv2d(256, 512, kernel_size=3, stride=2, padding=1, padding_mode="reflect"), 
-            nn.InstanceNorm2d(512),
-            nn.ReLU(inplace=True)   
-        )
-        """
-        #############################  END CONVOLUTIONAL BLOCKS #################################
 
         ############################   RESIDUAL BLOCKS    ##################################
-        
         self.res_blocks = nn.Sequential(
             *[ResidualBlock(256) for _ in range(num_residuals)]
         )
-        # if more features the residual block have 512
-        """
-        self.res_blocks = nn.Sequential(
-            *[ResidualBlock(512) for _ in range(num_residuals)]
-        )
-        """
-        ######################## END RESIDUAL BLOCKS ########################
 
-        ####################### TRANSPOSE CONVOLUTIONAL BLOCKS ##############
-
-        """
-        self.tran1 = nn.Sequential(
-            nn.ConvTranspose2d(512, 256, kernel_size=3, stride=2, padding=1, output_padding=1),
-            nn.InstanceNorm2d(256),
-            nn.ReLU(inplace=True)
-        )
-        """      
+        ####################### TRANSPOSE CONVOLUTIONAL BLOCKS ##############    
         self.tran1 = nn.Sequential(
             nn.ConvTranspose2d(256, 128, kernel_size=3, stride=2, padding=1, output_padding=1),
             nn.InstanceNorm2d(128),
@@ -84,8 +55,7 @@ class Generator(nn.Module):
             nn.ReLU(inplace=True)
         )
         
-        ####################### END TRANSPOSE CONVOLUTIONAL BLOCKS ##############
-        
+        ####################### LAST LAYER ############## 
         self.last = nn.Conv2d(64, img_channels, kernel_size=7, stride=1, padding=3, padding_mode="reflect")
 
     def forward(self, x):
