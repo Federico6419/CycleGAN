@@ -12,7 +12,7 @@ class Discriminator(nn.Module):
             print(m)
             if type(m) == nn.Conv2d:
                 torch.nn.init.normal_(m.weight.data, 0.0, 0.02)
-            print(m.weight)
+                print(m.weight)
             
         self.initial = nn.Sequential(             #The first block doesn't use instance normalization
             nn.Conv2d(in_channels, 64, kernel_size=4, stride=2, padding=1, padding_mode="reflect"),
