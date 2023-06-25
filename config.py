@@ -12,15 +12,15 @@ LAMBDA_CYCLE = 10
 LAMBDA_IDENTITY = 5 # 0.5*lambda_cycle
 NUM_EPOCHS = 5
 LOAD_MODEL = True
-SAVE_MODEL = True
+SAVE_MODEL = False
 TRAIN_MODEL = True
 TRANSFORMATION = "HorseToZebra"                          
 BETTER= False
 
-CHECKPOINT_GEN_A = "../drive/MyDrive/Checkpoints/HorseToZebra60/gen_a.pth.tar"     
-CHECKPOINT_GEN_B= "../drive/MyDrive/Checkpoints/HorseToZebra60/gen_b.pth.tar"
-CHECKPOINT_DISC_A = "../drive/MyDrive/Checkpoints/HorseToZebra60/disc_a.pth.tar"
-CHECKPOINT_DISC_B = "../drive/MyDrive/Checkpoints/HorseToZebra60/disc_b.pth.tar"
+CHECKPOINT_GEN_A = "../drive/MyDrive/Checkpoints/HorseToZebra50/gen_a.pth.tar"     
+CHECKPOINT_GEN_B= "../drive/MyDrive/Checkpoints/HorseToZebra50/gen_b.pth.tar"
+CHECKPOINT_DISC_A = "../drive/MyDrive/Checkpoints/HorseToZebra50/disc_a.pth.tar"
+CHECKPOINT_DISC_B = "../drive/MyDrive/Checkpoints/HorseToZebra50/disc_b.pth.tar"
 
 NEW_CHECKPOINT_GEN_A = "../drive/MyDrive/Checkpoints/HorseToZebra70/gen_a.pth.tar"     
 NEW_CHECKPOINT_GEN_B= "../drive/MyDrive/Checkpoints/HorseToZebra70/gen_b.pth.tar"
