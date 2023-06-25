@@ -62,9 +62,7 @@ class Generator(nn.Module):
         x = self.initial(x)
         x = self.conv1(x)
         x = self.conv2(x)
-        # x = self.conv3(x)
         x = self.res_blocks(x)
-        # x = self.tran1(x)
         x = self.tran1(x)
         x = self.tran2(x)
         
