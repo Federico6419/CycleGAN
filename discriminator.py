@@ -6,10 +6,16 @@ import torch.nn as nn
 class Discriminator(nn.Module):
     def __init__(self, in_channels=3):
         super().__init__()
+
+        #Function that initializes weights from aGaussian distribution N(0, 0.02)
+        def init_weights(m):
+            if type(m) == nn.Conv2d:
+                torch.nn.init.normal_(m.weight.data, 0.0, 0.02)
+            
         self.initial = nn.Sequential(             #The first block doesn't use instance normalization
             nn.Conv2d(in_channels, 64, kernel_size=4, stride=2, padding=1, padding_mode="reflect"),
             nn.LeakyReLU(0.2, inplace=True),
-        )
+        ).apply(init_weights)
 
         self.conv1 = nn.Sequential(
             nn.Conv2d(64, 128, kernel_size=4, stride=2, padding=1, bias=True, padding_mode="reflect"),    
