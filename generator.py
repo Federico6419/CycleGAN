@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn
 
- #Function that initializes weights from aGaussian distribution N(0, 0.02)
- def init_weights(m):
-     if(type(m) == nn.Conv2d or type(m) == nn.ConvTranspose2d):
-         torch.nn.init.normal_(m.weight.data, 0.0, 0.02)
+#Function that initializes weights from aGaussian distribution N(0, 0.02)
+def init_weights(m):
+    if(type(m) == nn.Conv2d or type(m) == nn.ConvTranspose2d):
+        torch.nn.init.normal_(m.weight.data, 0.0, 0.02)
                 
 #Define the Residual Block structure, composed by a convolutional layer and an instance normalization (only the first use an activation function)
 class ResidualBlock(nn.Module):
